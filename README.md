@@ -5,6 +5,10 @@ NodeJs et NPM est nécessaire pour installer le thème. Si c'est déjà le cas, 
 node -v
 npm -v
 ````
+## Installer Sass
+```sh
+npm install -g sass
+```
 ## Installer Gulp
 ```sh
 npm install --global gulp
