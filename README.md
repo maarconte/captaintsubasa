@@ -13,13 +13,21 @@ npm install -g sass
 ```sh
 npm install --global gulp
 ```
-## Cloner le thème
+
+# Optionel
+## Installer Local by Flyweel
+Pour installer un site wordpress local en quelques clic, vous pouvez utiliser [Local](https://local.getflywheel.com).
+
+# Installer le thème
 Se placer dans le dossier wp-content/themes/
 ```sh
 git clone https://github.com/ThatMuch/StanLee-WPTheme-Generator.git captaintsubasa
 ```
 Dans le fichier gulp.js changer à la ligne 33 :
 'demarkage.local' par '[URL_du_projet_local]' (Cela peut être localhost:8000 ou local.dev en fonction de vos configurations)
+
+Si vous utilisez Local by Flywheel se référer au Site Domain
+![Local by Flywheel](https://getflywheel.com/wp-content/uploads/2016/12/Dash-Collapsed@2x.png)
 
 ## Installer les modules
 ```sh
