@@ -1,3 +1,7 @@
+
+# Installer un site wordpress en local
+## Installer Local by Flyweel
+Pour installer un site wordpress local en quelques clic, vous pouvez utiliser [Local](https://local.getflywheel.com).
 # Prérequis
 ## Installer Node JS et NPM
 NodeJs et NPM est nécessaire pour installer le thème. Si c'est déjà le cas, passez à l'étape suivante. Sinon téléchargez [NodeJs](https://nodejs.org/en/download/). Une fois installé, vous pouvez vérifier la version de NodeJs et NPM en tapant les commandes suivantes.
@@ -13,10 +17,6 @@ npm install -g sass
 ```sh
 npm install --global gulp
 ```
-
-# Optionel
-## Installer Local by Flyweel
-Pour installer un site wordpress local en quelques clic, vous pouvez utiliser [Local](https://local.getflywheel.com).
 
 # Installer le thème
 Se placer dans le dossier wp-content/themes/
