@@ -25,7 +25,7 @@ Dans le fichier gulp.js changer à la ligne 33 :
 ```sh
 npm install
 ```
-# Utilisez le thème
+# Utiliser le thème
 ## Lancer le projet
 ```sh
 gulp
