@@ -1,5 +1,5 @@
 /*!
-Theme Name: medusa
+Theme Name: CaptainTsubasa
 Theme URI: https://example.com/themeuri/
 Author: undefined
 Author URI: https://thatmuch.fr
@@ -7,13 +7,13 @@ Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: medusa
+Text Domain: CaptainTsubasa
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-medusa is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+CaptainTsubasa is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -44,49 +44,35 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
-
-// bower:scss
-
-// endbower
-
-
-
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "utilities/variables";
+@import "utilities/mixins";
 
 /*--------------------------------------------------------------
 # Frameworks
-- To activate Bulma, uncomment the line "@import "bulma/bulma"" 
+- To activate Bulma, uncomment the line "@import "vendor/bulma/bulma"" 
 and comment the line "@import "bootsrap/bootstrap"".
-- To prevent conflict, comment the line "" in function.php
 --------------------------------------------------------------*/
-@import "bootstrap/bootstrap";
-//@import "bulma/bulma"
+@import "vendor/bootstrap/bootstrap";
+//@import "vendor/bulma/bulma"
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "normalize";
+@import "vendor/normalize";
 
 /*--------------------------------------------------------------
-# Typography
+# Components
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "components/components";
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -94,14 +80,15 @@ and comment the line "@import "bootsrap/bootstrap"".
 @import "modules/accessibility";
 
 /*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/pages";
 
 /*--------------------------------------------------------------
 # Widgets
@@ -122,3 +109,4 @@ and comment the line "@import "bootsrap/bootstrap"".
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
