@@ -18,6 +18,9 @@ Se placer dans le dossier wp-content/themes/
 ```sh
 git clone https://github.com/ThatMuch/StanLee-WPTheme-Generator.git captaintsubasa
 ```
+Dans le fichier gulp.js changer à la ligne 33 :
+'demarkage.local' par '[URL_du_projet_local]' (Cela peut être localhost:8000 ou local.dev en fonction de vos configurations)
+
 ## Installer les modules
 ```sh
 npm install
