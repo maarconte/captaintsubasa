@@ -51,14 +51,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "utilities/mixins";
 
 /*--------------------------------------------------------------
-# Frameworks
-- To activate Bulma, uncomment the line "@import "vendor/bulma/bulma"" 
-and comment the line "@import "bootsrap/bootstrap"".
---------------------------------------------------------------*/
-@import "vendor/bootstrap/bootstrap";
-//@import "vendor/bulma/bulma"
-
-/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "vendor/normalize";

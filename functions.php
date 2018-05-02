@@ -8,9 +8,16 @@
  */
 
 function wpt_register_js() {
-    wp_enqueue_script( 'tether', get_template_directory_uri().'/js/tether.min.js');
-    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
-    wp_enqueue_script('jquery.bootstrap.min');
+	$template_url = get_template_directory_uri();
+	// jQuery.
+	wp_enqueue_script( 'jquery' );
+	//Tether
+	wp_enqueue_script( 'tether', get_template_directory_uri().'/js/tether.min.js');
+	// Bootstrap
+	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
+	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
+	//Main Style
+	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 }
 add_action( 'init', 'wpt_register_js' );
 
