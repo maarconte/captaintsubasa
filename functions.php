@@ -16,10 +16,8 @@ function wpt_register_js() {
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
-	//Main Style
-	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 }
-add_action( 'init', 'wpt_register_js' );
+add_action( 'wp_enqueue_scripts', 'wpt_register_js' );
 
 
 if ( ! function_exists( 'CaptainTsubasa_setup' ) ) :

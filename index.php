@@ -47,6 +47,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+		<button class="btn btn-pirmary">Troll</button>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
