@@ -2,3 +2,30 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $font__heading;
 }
+
+h1 {
+    @include heading-1;
+    @include breakpoint(mobileonly) {
+        @include heading-2;
+    }
+}
+
+h2 {
+    @include heading-2;
+
+    @include breakpoint(mobileonly) {
+        @include heading-3;
+    }
+}
+
+h3 {
+    @include heading-3;
+
+    @include breakpoint(mobileonly) {
+        @include heading-4;
+    }
+}
+
+h4 {
+    @include heading-4;
+}

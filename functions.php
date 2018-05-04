@@ -16,6 +16,8 @@ function wpt_register_js() {
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
+	// Animation Search
+	wp_enqueue_script( 'search', $template_url . '/js/animation-search.js');
 }
 add_action( 'wp_enqueue_scripts', 'wpt_register_js' );
 
