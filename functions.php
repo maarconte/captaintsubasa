@@ -126,7 +126,8 @@ function CaptainTsubasa_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'CaptainTsubasa_scripts' );
-
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 /**
  * Implement the Custom Header feature.
  */
