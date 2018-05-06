@@ -1,5 +1,5 @@
 #masthead {
-    height: 456px;
+    height: 556px;
     overflow: hidden;
     color: $white;
     background-color: #ccc;
@@ -7,4 +7,45 @@
     background-size: cover;
     background-position: center center;
     padding-top: 56px;
+
+    .page_infos {
+        display: flex;
+        background-color: rgba($color: $red, $alpha: 0.6);
+        padding: 20px 20px 0 ;
+        text-align: center;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 500px;
+
+        .page_category {
+            font-weight: 700;
+            color: $white !important;
+        }
+
+        .page_title {
+            position: relative;
+            margin-top: 0;
+            margin-bottom: .7em !important;
+            @include heading-2;
+            @include breakpoint(mobileonly) {
+                @include heading-3;
+            }
+
+            &:after {
+                display: block;
+                position: absolute;
+                bottom: -0.17em;
+                left: 25%;
+                content: "";
+                width: 50%;
+                height: 3px;
+                background-color: $white;
+            }
+        }
+
+        .page_date {
+            font-style: italic;
+            font-weight: lighter;
+        }
+    }
 }
