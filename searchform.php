@@ -5,6 +5,6 @@
         <input id="searchsubmit" value="Search" type="submit">
     </div> -->
 
-    <input type="text" name="input" class="input">
+    <input type="text" name="input" class="input" placeholder="Recherche">
     <button type="reset" class="search"></button>
 </form>

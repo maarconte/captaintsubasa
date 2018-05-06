@@ -37,7 +37,6 @@
         margin-right: .5em;
         padding: 0 .5em;
 
-
         .menu-item {
             display: inline;
 
@@ -49,8 +48,8 @@
                 width: 20px;
 
                 .icon {
-                    height: 18px;
-                    width: 18px;
+                    height: 100%;
+                    width: 100%;
                     vertical-align: middle;
                     fill: $white;
                 }
@@ -104,6 +103,9 @@
             /*             -webkit-transform: translate(-100%, -50%);
                         -ms-transform: translate(-100%, -50%);
             			transform: translate(-100%, -50%); */
+        }
+        input::placeholder {
+            opacity: 0;
         }
 
         .search {
@@ -200,6 +202,9 @@ transform: translate(-100%, -50%); */
                         -ms-transform: translate(-100%, -50%);
                         transform: translate(-100%, -50%); */
         }
+        .square::placeholder {
+            opacity: 1;
+        }
     }
 
     #searchform.on {
@@ -215,3 +220,32 @@ transform: translate(-100%, -50%); */
 
     /*=====  End of Search                 ======*/
 }
+
+/*=============================================
+=            Mobile Menu                      =
+=============================================*/
+.collapse.show,
+.collapsing {
+    .navbar-nav {
+        border-top: 1px solid $red;
+        border-bottom: 1px solid $red;
+        margin: 10px 0;
+    }
+
+    .social-links-menu {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            height: 40px;
+            width: 40px;
+        }
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+}
+
+/*=====  End of Mobile Menu            ======*/
