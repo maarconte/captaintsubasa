@@ -9,7 +9,8 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+<div class="row">
+	<div id="primary" class="content-area col-sm-9">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -44,5 +45,7 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+get_sidebar(); ?>
+</div>
+<?php
+get_footer(); ?>
