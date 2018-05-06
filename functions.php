@@ -60,6 +60,7 @@ function CaptainTsubasa_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'CaptainTsubasa' ),
+		'social' => __( 'Social Links Menu', 'CaptainTsubasa' ),
 	) );
 
 	/*
@@ -79,6 +80,70 @@ function CaptainTsubasa_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			// Place three core-defined widgets in the sidebar area.
+			'sidebar-1' => array(
+				'text_business_info',
+				'search',
+				'text_about',
+			),
+
+			// Add the core-defined business info widget to the footer 1 area.
+			'sidebar-2' => array(
+				'text_business_info',
+			),
+
+			// Put two core-defined widgets in the footer 2 area.
+			'sidebar-3' => array(
+				'text_about',
+				'search',
+			),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'Qui sommes nous ?',
+			'Contact'
+		),
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'primary' => array(
+				'name' => __( 'Top Menu', 'captaintsubasa' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'social' => array(
+				'name' => __( 'Social Links Menu', 'captaintsubasa' ),
+				'items' => array(
+					'link_facebook',
+					'link_twitter',
+					'link_instagram',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters Twenty Seventeen array of starter content.
+	 *
+	 * @since Twenty Seventeen 1.1
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'captaintsubasa_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'CaptainTsubasa_setup' );
@@ -128,6 +193,7 @@ function CaptainTsubasa_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'CaptainTsubasa_scripts' );
+
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 /**
@@ -154,3 +220,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );

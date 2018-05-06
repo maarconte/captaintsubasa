@@ -63,13 +63,20 @@ td,th{padding:0}
 .main-navigation .nav-item{font-family:'Montserrat',sans-serif;text-transform:uppercase}
 .main-navigation .nav-item:hover .nav-link{opacity:.8}
 .main-navigation .navbar-toggler{padding:0 !important;border:0}
+.main-navigation .social-links-menu{position:relative;list-style:none;margin-bottom:0;margin-left:0;margin-right:.5em;padding:0 .5em}
+.main-navigation .social-links-menu .menu-item{display:inline}
+.main-navigation .social-links-menu .menu-item a{display:inline-block;height:20px;margin:0 .5em 0 0;text-align:center;width:20px}
+.main-navigation .social-links-menu .menu-item a .icon{height:18px;width:18px;vertical-align:middle;fill:#f7f5f3}
+.main-navigation .social-links-menu:before,.main-navigation .social-links-menu:after{display:block;position:absolute;top:0;content:"";width:1px;background-color:#d1021c;height:100%}
+.main-navigation .social-links-menu:before{left:0}
+.main-navigation .social-links-menu:after{right:0}
 .main-navigation .header-search{position:relative}
-.main-navigation #searchform input{box-sizing:border-box;width:25px;height:25px;border:2px solid #f7f5f3;border-radius:50%;background:0;color:#f7f5f3;font-size:16px;outline:0;-webkit-transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;-webkit-transition-delay:.4s;transition-delay:.4s}
-.main-navigation #searchform .search{background:0;position:absolute;top:0;left:0;height:25px;width:25px;padding:0;border-radius:100%;outline:0;border:0;color:inherit;cursor:pointer;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
-.main-navigation #searchform .search:before{content:"";position:absolute;width:13px;height:3px;background-color:#fff;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);margin-top:10px;margin-left:3px;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
-.main-navigation #searchform .close{-webkit-transition:.4s ease-in-out;transition:.4s ease-in-out;-webkit-transition-delay:.4s;transition-delay:.4s;position:relative;margin-top:10px}
-.main-navigation #searchform .close:before{content:"";position:absolute;width:27px;height:4px;margin-top:-1px;margin-left:-13px;background-color:#fff;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
-.main-navigation #searchform .close:after{content:"";position:absolute;width:27px;height:4px;background-color:#fff;margin-top:-1px;margin-left:-13px;cursor:pointer;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
+.main-navigation #searchform input{box-sizing:border-box;width:15px;height:15px;border:2px solid #f7f5f3;border-radius:50%;background:0;color:#f7f5f3;font-size:16px;outline:0;-webkit-transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;-webkit-transition-delay:.4s;transition-delay:.4s}
+.main-navigation #searchform .search{position:absolute;top:0;left:0;background:0;height:30px;width:30px;padding:0;border-radius:100%;outline:0;border:0;color:inherit;cursor:pointer;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
+.main-navigation #searchform .search:before{position:absolute;content:"";width:8px;height:2px;background-color:#fff;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);margin-top:4px;margin-left:-4px;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
+.main-navigation #searchform .close{position:relative;-webkit-transition:.4s ease-in-out;transition:.4s ease-in-out;-webkit-transition-delay:.4s;transition-delay:.4s;margin-top:10px}
+.main-navigation #searchform .close:before{position:absolute;content:"";width:27px;height:4px;margin-top:-1px;margin-left:-13px;background-color:#fff;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
+.main-navigation #searchform .close:after{position:absolute;content:"";width:27px;height:4px;background-color:#fff;margin-top:-1px;margin-left:-13px;cursor:pointer;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
 .main-navigation #searchform .square{box-sizing:border-box;padding:0 40px 0 10px;width:300px;height:50px;border:2px solid #fff;border-radius:0;background:0;color:#fff;font-size:16px;font-weight:400;outline:0;-webkit-transition:width .4s ease-in-out,border-radius .4s ease-in-out,padding .2s;transition:width .4s ease-in-out,border-radius .4s ease-in-out,padding .2s;-webkit-transition-delay:.4s,0s,0.4s;transition-delay:.4s,0s,0.4s}
 .main-navigation #searchform.on{-webkit-animation-name:in-out;animation-name:in-out;-webkit-animation-duration:.7s;animation-duration:.7s;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:1;animation-iteration-count:1}
 table{margin:0 0 1.5em;width:100%}
