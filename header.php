@@ -29,7 +29,7 @@
 <?php if (is_single() || is_page()): ?> style="background-image: url(<?php the_post_thumbnail_url()?>)" <?php endif;?> >
 	<!-- Menu -->
 	<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg fixed-top" role="navigation">
-		<a class="navbar-brand" href="<?=home_url()?>">Demarquage</a>
+		<a class="navbar-brand" href="<?=home_url()?>"><?= get_bloginfo( 'name' ); ?></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 		</button>
@@ -81,4 +81,3 @@
 			<?php endif;?>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content container">
-		<div class="row">

@@ -63,13 +63,6 @@ td,th{padding:0}
 .main-navigation .nav-item{font-family:'Montserrat',sans-serif;text-transform:uppercase}
 .main-navigation .nav-item:hover .nav-link{opacity:.8}
 .main-navigation .navbar-toggler{padding:0 !important;border:0}
-.main-navigation .social-links-menu{position:relative;list-style:none;margin-bottom:0;margin-left:0;margin-right:.5em;padding:0 .5em}
-.main-navigation .social-links-menu .menu-item{display:inline}
-.main-navigation .social-links-menu .menu-item a{display:inline-block;height:20px;margin:0 .5em 0 0;text-align:center;width:20px}
-.main-navigation .social-links-menu .menu-item a .icon{height:100%;width:100%;vertical-align:middle;fill:#f7f5f3}
-.main-navigation .social-links-menu:before,.main-navigation .social-links-menu:after{display:block;position:absolute;top:0;content:"";width:1px;background-color:#d1021c;height:100%}
-.main-navigation .social-links-menu:before{left:0}
-.main-navigation .social-links-menu:after{right:0}
 .main-navigation .header-search{position:relative}
 .main-navigation #searchform input{box-sizing:border-box;width:15px;height:15px;border:2px solid #f7f5f3;border-radius:50%;background:0;color:#f7f5f3;font-size:16px;outline:0;-webkit-transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;transition:width .4s ease-in-out,border-radius .8s ease-in-out,padding .2s;-webkit-transition-delay:.4s;transition-delay:.4s}
 .main-navigation #searchform input::-webkit-input-placeholder{opacity:0}
@@ -91,6 +84,13 @@ td,th{padding:0}
 .collapse.show .social-links-menu,.collapsing .social-links-menu{margin-bottom:10px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
 .collapse.show .social-links-menu a,.collapsing .social-links-menu a{height:40px;width:40px}
 .collapse.show .social-links-menu:before,.collapse.show .social-links-menu:after,.collapsing .social-links-menu:before,.collapsing .social-links-menu:after{display:none}
+ul.social-links-menu{position:relative;list-style:none;margin-bottom:0;margin-left:0;margin-right:.5em;padding:0 .5em}
+ul.social-links-menu .menu-item{display:inline}
+ul.social-links-menu .menu-item a{display:inline-block;height:20px;margin:0 .5em;text-align:center;width:20px}
+ul.social-links-menu .menu-item a .icon{height:100%;width:100%;vertical-align:middle;fill:#f7f5f3}
+ul.social-links-menu:before,ul.social-links-menu:after{display:block;position:absolute;top:0;content:"";width:1px;background-color:#d1021c;height:100%}
+ul.social-links-menu:before{left:0}
+ul.social-links-menu:after{right:0}
 table{margin:0 0 1.5em;width:100%}
 ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
@@ -140,6 +140,13 @@ big{font-size:125%}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
+.widget .widget-title{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem;color:#d1021c;position:relative}
+.widget .widget-title:after{content:"";position:absolute;right:0;height:1px;width:40%;background-color:#d1021c;top:50%;display:block}
+.widget ul{margin:0;padding:0;list-style:none}
+.widget ul li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:10px 0 0 0;margin-bottom:10px}
+.widget ul li a{color:#3f3d40}
+.widget ul li .post-date{font-style:italic;color:#9b9b9b}
+.widget ul li:not(:first-child){border-top:1px solid #9b9b9b}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}
@@ -148,6 +155,15 @@ big{font-size:125%}
 .page-links{clear:both;margin:0 0 1.5em}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
+.widget{margin:0 0 1.5em}
+.widget select{max-width:100%}
+.widget .widget-title{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem;color:#d1021c;position:relative}
+.widget .widget-title:after{content:"";position:absolute;right:0;height:1px;width:40%;background-color:#d1021c;top:50%;display:block}
+.widget ul{margin:0;padding:0;list-style:none}
+.widget ul li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:10px 0 0 0;margin-bottom:10px}
+.widget ul li a{color:#3f3d40}
+.widget ul li .post-date{font-style:italic;color:#9b9b9b}
+.widget ul li:not(:first-child){border-top:1px solid #9b9b9b}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
 .infinity-end.neverending .site-footer{display:block}
 .page-content .wp-smiley,.entry-content .wp-smiley,.comment-content .wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
@@ -167,20 +183,20 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
-.site-footer{clear:both;width:75%}
+.site-footer{background-color:#3f3d40;color:#f7f5f3;padding:15px 0}
+.site-footer ul.social-links-menu:before,.site-footer ul.social-links-menu:after{display:none}
+.site-footer ul.social-links-menu .icon{fill:#9b9b9b !important}
+.site-footer .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;color:#9b9b9b !important;opacity:.6}
+.site-footer .site-info .sep{margin:0 5px}
+.site-footer .widget .widget-title{color:#9b9b9b}
+.site-footer .widget .widget-title:after{background-color:#9b9b9b}
+.site-footer .widget ul li a{color:#9b9b9b}
 #masthead{height:556px;overflow:hidden;color:#f7f5f3;background-color:#ccc;background-repeat:no-repeat;background-size:cover;background-position:center center;padding-top:56px;margin-bottom:30px}
 #masthead .page_infos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background-color:rgba(209,2,28,0.6);padding:20px 20px 0;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;max-width:500px}
 #masthead .page_infos .page_category{font-weight:700;color:#f7f5f3 !important}
 #masthead .page_infos .page_title{position:relative;margin-top:0;margin-bottom:.7em !important;margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 #masthead .page_infos .page_title:after{display:block;position:absolute;bottom:-0.17em;left:25%;content:"";width:50%;height:3px;background-color:#f7f5f3}
 #masthead .page_infos .page_date{font-style:italic;font-weight:lighter}
-#secondary .widget-title{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem;color:#d1021c;position:relative}
-#secondary .widget-title:after{content:"";position:absolute;right:0;height:1px;width:40%;background-color:#d1021c;top:50%;display:block}
-#secondary ul{margin:0;padding:0;list-style:none}
-#secondary ul li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:10px 0 0 0;margin-bottom:10px}
-#secondary ul li a{color:#3f3d40}
-#secondary ul li .post-date{font-style:italic;color:#9b9b9b}
-#secondary ul li:not(:first-child){border-top:1px solid #9b9b9b}
 @media(max-width:37.5em){h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.5rem}
 h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem}

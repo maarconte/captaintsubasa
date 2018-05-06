@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+<div class="row">
 	<div id="primary" class="content-area col-sm-9">
 		<main id="main" class="site-main" role="main">
 
@@ -47,11 +48,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-		<button class="btn btn-pirmary">Troll</button>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+get_sidebar();?>
+</div>
+<?php get_footer();?>

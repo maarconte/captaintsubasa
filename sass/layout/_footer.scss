@@ -1,4 +1,44 @@
 .site-footer {
-	clear: both;
-	width: $size__site-main;
+    background-color: $black;
+    color: $white;
+    padding: 15px 0;
+
+    ul.social-links-menu {
+        &:before, &:after {
+            display: none;
+        }
+
+        .icon {
+            fill: $grey1 !important;
+        }
+    }
+
+    .site-info {
+        display: flex;
+		justify-content: center;
+		color: $grey1 !important;
+		opacity: .6;
+
+        .sep {
+            margin: 0 5px;
+        }
+    }
+
+    .widget {
+        .widget-title {
+            color: $grey1;
+
+            &:after {
+                background-color: $grey1;
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    color: $grey1;
+                }
+            }
+        }
+    }
 }

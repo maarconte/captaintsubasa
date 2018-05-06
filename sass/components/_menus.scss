@@ -27,57 +27,6 @@
     }
 
     /*=============================================
-    =            Social Menu                      =
-    =============================================*/
-    .social-links-menu {
-        position: relative;
-        list-style: none;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: .5em;
-        padding: 0 .5em;
-
-        .menu-item {
-            display: inline;
-
-            a {
-                display: inline-block;
-                height: 20px;
-                margin: 0 0.5em 0 0;
-                text-align: center;
-                width: 20px;
-
-                .icon {
-                    height: 100%;
-                    width: 100%;
-                    vertical-align: middle;
-                    fill: $white;
-                }
-            }
-        }
-
-        &:before, &:after {
-            display: block;
-            position: absolute;
-            top: 0;
-            content: "";
-            width: 1px;
-            background-color: $red;
-            height: 100%;
-        }
-
-        &:before {
-            left: 0;
-        }
-
-        &:after {
-            right: 0;
-        }
-    }
-
-    /*=====  End of Social Menu            ======*/
-
-    /*=============================================
     =            Search                           =
 	=============================================*/
     .header-search {
@@ -104,6 +53,7 @@
                         -ms-transform: translate(-100%, -50%);
             			transform: translate(-100%, -50%); */
         }
+
         input::placeholder {
             opacity: 0;
         }
@@ -202,6 +152,7 @@ transform: translate(-100%, -50%); */
                         -ms-transform: translate(-100%, -50%);
                         transform: translate(-100%, -50%); */
         }
+
         .square::placeholder {
             opacity: 1;
         }
@@ -249,3 +200,54 @@ transform: translate(-100%, -50%); */
 }
 
 /*=====  End of Mobile Menu            ======*/
+
+/*=============================================
+=            Social Menu                      =
+=============================================*/
+ul.social-links-menu {
+    position: relative;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: .5em;
+    padding: 0 .5em;
+
+    .menu-item {
+        display: inline;
+
+        a {
+            display: inline-block;
+            height: 20px;
+            margin: 0 0.5em ;
+            text-align: center;
+            width: 20px;
+
+            .icon {
+                height: 100%;
+                width: 100%;
+                vertical-align: middle;
+                fill: $white;
+            }
+        }
+    }
+
+    &:before, &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 1px;
+        background-color: $red;
+        height: 100%;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
+
+/*=====  End of Social Menu            ======*/

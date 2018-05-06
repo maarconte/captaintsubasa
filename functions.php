@@ -91,13 +91,8 @@ function CaptainTsubasa_setup() {
 				'text_about',
 			),
 
-			// Add the core-defined business info widget to the footer 1 area.
-			'sidebar-2' => array(
-				'text_business_info',
-			),
-
 			// Put two core-defined widgets in the footer 2 area.
-			'sidebar-3' => array(
+			'sidebar-2' => array(
 				'text_about',
 				'search',
 			),
@@ -172,6 +167,15 @@ function CaptainTsubasa_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'CaptainTsubasa' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer ', 'CaptainTsubasa' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'CaptainTsubasa' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-4">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
