@@ -167,13 +167,20 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
-.site-footer{clear:both;width:100%}
-#masthead{height:556px;overflow:hidden;color:#f7f5f3;background-color:#ccc;background-repeat:no-repeat;background-size:cover;background-position:center center;padding-top:56px}
+.site-footer{clear:both;width:75%}
+#masthead{height:556px;overflow:hidden;color:#f7f5f3;background-color:#ccc;background-repeat:no-repeat;background-size:cover;background-position:center center;padding-top:56px;margin-bottom:30px}
 #masthead .page_infos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background-color:rgba(209,2,28,0.6);padding:20px 20px 0;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;max-width:500px}
 #masthead .page_infos .page_category{font-weight:700;color:#f7f5f3 !important}
 #masthead .page_infos .page_title{position:relative;margin-top:0;margin-bottom:.7em !important;margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 #masthead .page_infos .page_title:after{display:block;position:absolute;bottom:-0.17em;left:25%;content:"";width:50%;height:3px;background-color:#f7f5f3}
 #masthead .page_infos .page_date{font-style:italic;font-weight:lighter}
+#secondary .widget-title{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem;color:#d1021c;position:relative}
+#secondary .widget-title:after{content:"";position:absolute;right:0;height:1px;width:40%;background-color:#d1021c;top:50%;display:block}
+#secondary ul{margin:0;padding:0;list-style:none}
+#secondary ul li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:10px 0 0 0;margin-bottom:10px}
+#secondary ul li a{color:#3f3d40}
+#secondary ul li .post-date{font-style:italic;color:#9b9b9b}
+#secondary ul li:not(:first-child){border-top:1px solid #9b9b9b}
 @media(max-width:37.5em){h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.5rem}
 h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem}
