@@ -39,17 +39,20 @@ if( $related ) {
     foreach( $related as $post ) {
         setup_postdata($post); ?>
 		<div class="col-sm-4">
-			<div class="card">
-				<a href="<?php the_permalink(); ?>"><?php
-				if(has_post_thumbnail()) {
+		<div class="card">
+		<a href="<?php the_permalink(); ?>" class="card-img">
+			<div class="content">
+				<?php if(has_post_thumbnail()) {
 					the_post_thumbnail();
 				} else { ?>
-					<img src="http://support.yumpu.com/en/wp-content/themes/qaengine/img/default-thumbnail.jpg" alt="default-image">
-				<?php } ?></a>
-				<div class="card-body">
-					<h6 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-				</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-thumbnail.jpg" alt="default-image">
+				<?php } ?>
 			</div>
+		</a>
+		<div class="card-body">
+			<h6 class="card-title"><a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h6>
+		</div>
+	</div>
 		</div>
   <?php  }
     wp_reset_postdata();

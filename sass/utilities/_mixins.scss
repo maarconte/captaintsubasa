@@ -105,4 +105,10 @@
   @mixin heading-6 {
 	@include heading;
 	font-size: 0.875rem;
-  }
+	}
+	
+	@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}

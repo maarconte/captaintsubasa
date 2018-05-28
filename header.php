@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'medusa');?></a>
 		<!-- Menu -->
-		<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg fixed-top" role="navigation">
+		<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg sticky-top" role="navigation">
 			<a class="navbar-brand" href="<?=home_url()?>"><?=get_bloginfo('name');?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -61,9 +61,52 @@
 
 			<!-- Header Home -->
 			<?php if (is_home()): ?>
-				<header id="masthead" class="site-header d-flex align-items-center justify-content-center" role="banner">
-					<div class="container">
+				<header id="masthead" class=" home site-header" role="banner">
+					<div class="container ">
 						<!-- Carrousel -->
+						<div class="row">
+							<div class="col-8 featured-post">
+							<?php $args=array(
+							'showposts' => 1
+							); 
+							$posts=get_posts($args);
+							foreach($posts as $post) :?>
+								<a href="<?php the_permalink(); ?>" class="post-img">
+									<div class="content">
+										<?php if(has_post_thumbnail()) {
+											the_post_thumbnail();
+										} else { ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-thumbnail.jpg" alt="default-image">
+										<?php } ?>
+									</div>
+									<div class="post-title">
+										<h6><?php the_title(); ?></h6>
+									</div>
+								</a>
+							<?php endforeach ?>
+							</div>
+							<div class="col-4">
+							<?php $args=array(
+							'showposts' => 3 ,
+							'offset'=> 1 
+							); 
+							$posts=get_posts($args);
+							foreach($posts as $post) :?>
+								<a href="<?php the_permalink(); ?>" class="post-img">
+									<div class="content">
+										<?php if(has_post_thumbnail()) {
+											the_post_thumbnail();
+										} else { ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-thumbnail.jpg" alt="default-image">
+										<?php } ?>
+									</div>
+									<div class="post-title">
+										<h6><?php the_title(); ?></h6>
+									</div>
+								</a>
+							<?php endforeach ?>
+							</div>
+						</div>
 					</div>
 				</header>
 

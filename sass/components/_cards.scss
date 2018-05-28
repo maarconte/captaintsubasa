@@ -1,11 +1,35 @@
 .card {
-    border: none;
-}
-.card-title a{
+  border: none;
+  border-radius: 0;
+  margin-bottom: 20px;
+  background-color: transparent;
+  .card-title a {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     color: $black;
+  }
+  .card-img {
+    overflow: hidden;
+    border-radius: 0;
+    @include ratio(16, 9);
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .card-body {
+    padding-left: 0;
+  }
+}
+
+.card-featured {
+    height: calc(100% - 20px);
+    margin-bottom: 0;
+  .card-img {
+    @include ratio(3, 2);
+  }
 }

@@ -2,11 +2,10 @@
     height: 556px;
     overflow: hidden;
     color: $white;
-    background-color: #ccc;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding-top: 56px;
+    margin-top: 30px;
     margin-bottom: 30px; 
 
     .page_infos {
@@ -49,4 +48,44 @@
             font-weight: lighter;
         }
     }
+    .featured-post {
+        padding-right: 0;
+        .post-img {
+            @include ratio(3,2.25);
+        }
+    }
+    .post-img {
+
+        @include ratio(16, 8.2);
+        margin-bottom: 10px;
+        display: block;
+        &:before {
+            @include pseudo;
+            background-color: rgba($color: $black, $alpha: 0.5);
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+    }
+}
+.home.site-header .post-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: $white;
+    h6 {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.featured-post .post-title {
+    background-color: rgba($color: $red, $alpha: 0.6);
 }
