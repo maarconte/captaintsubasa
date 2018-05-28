@@ -17,7 +17,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
+			   
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -26,6 +26,36 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
+<div class="row">
+<?php $related = get_posts( 
+    array( 
+        'category__in' => wp_get_post_categories( $post->ID ), 
+        'numberposts'  => 3, 
+        'post__not_in' => array( $post->ID ) 
+    ) 
+);
+
+if( $related ) { 
+    foreach( $related as $post ) {
+        setup_postdata($post); ?>
+		<div class="col-sm-4">
+			<div class="card">
+				<a href="<?php the_permalink(); ?>"><?php
+				if(has_post_thumbnail()) {
+					the_post_thumbnail();
+				} else { ?>
+					<img src="http://support.yumpu.com/en/wp-content/themes/qaengine/img/default-thumbnail.jpg" alt="default-image">
+				<?php } ?></a>
+				<div class="card-body">
+					<h6 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+				</div>
+			</div>
+		</div>
+  <?php  }
+    wp_reset_postdata();
+}?>
+</div>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
@@ -33,5 +63,4 @@ get_header(); ?>
 <?php
 get_sidebar(); ?>
 </div>
-<?php get_footer();
-?>
+<?php get_footer(); ?>

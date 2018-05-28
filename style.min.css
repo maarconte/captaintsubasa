@@ -91,6 +91,8 @@ ul.social-links-menu .menu-item a .icon{height:100%;width:100%;vertical-align:mi
 ul.social-links-menu:before,ul.social-links-menu:after{display:block;position:absolute;top:0;content:"";width:1px;background-color:#d1021c;height:100%}
 ul.social-links-menu:before{left:0}
 ul.social-links-menu:after{right:0}
+.card{border:0}
+.card-title a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;color:#3f3d40}
 table{margin:0 0 1.5em;width:100%}
 ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
@@ -138,6 +140,7 @@ big{font-size:125%}
 #content[tabindex="-1"]:focus{outline:0}
 .clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after{content:"";display:table;table-layout:fixed}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
+.entry-header .entry-title{margin:0 0 .35em !important}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .widget .widget-title{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem;color:#d1021c;position:relative}
@@ -197,6 +200,7 @@ embed,iframe,object{max-width:100%}
 #masthead .page_infos .page_title{position:relative;margin-top:0;margin-bottom:.7em !important;margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 #masthead .page_infos .page_title:after{display:block;position:absolute;bottom:-0.17em;left:25%;content:"";width:50%;height:3px;background-color:#f7f5f3}
 #masthead .page_infos .page_date{font-style:italic;font-weight:lighter}
+.site-content{padding-bottom:30px}
 @media(max-width:37.5em){h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:2.966rem}
 h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.5rem}
 h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:"Montserrat",sans-serif;text-transform:uppercase;font-size:1.318rem}
