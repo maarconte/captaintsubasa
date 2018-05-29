@@ -21,6 +21,7 @@ get_header(); ?>
 			$cat_args=array(
 			'orderby' => 'name',
 			'order' => 'ASC',
+			'exclude'    => array( 1 )
 			);
 			$categories=get_categories($cat_args);
 				foreach($categories as $category) { 
