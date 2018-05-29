@@ -66,7 +66,16 @@
 	  right: 0;
 	  bottom: 0;
 	}
-  }
+	}
+	
+	@mixin zoomIn($transition-duration, $scale) {
+		img {
+			transition-duration: $transition-duration;
+		}
+		&:hover img{
+			transform: scale($scale);
+		}
+	}
 
   @mixin heading {
 	margin-bottom: 0.35em;
@@ -111,4 +120,22 @@
     content: $content;
     display: $display;
     position: $pos;
+}
+
+@mixin ellipsis($lines: 1) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin line($height) {
+	display: flex;
+	.line {
+		margin-left: 30px;
+		height: $height;
+		width: 100%;
+		border-bottom: 1px solid $red;
+	}
 }

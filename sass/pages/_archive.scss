@@ -1,0 +1,9 @@
+.page-title {
+    @include heading-2;
+    color: $red;
+    margin-top: 0;
+}
+
+.page-header {
+    @include line(28px)
+}

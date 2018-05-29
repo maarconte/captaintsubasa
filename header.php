@@ -76,7 +76,7 @@
 										<?php if(has_post_thumbnail()) {
 											the_post_thumbnail();
 										} else { ?>
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-thumbnail.jpg" alt="default-image">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/default-thumbnail.jpg" alt="default-image">
 										<?php } ?>
 									</div>
 									<div class="post-title">
@@ -97,7 +97,7 @@
 										<?php if(has_post_thumbnail()) {
 											the_post_thumbnail();
 										} else { ?>
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-thumbnail.jpg" alt="default-image">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/default-thumbnail.jpg" alt="default-image">
 										<?php } ?>
 									</div>
 									<div class="post-title">

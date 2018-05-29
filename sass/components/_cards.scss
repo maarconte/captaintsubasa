@@ -4,17 +4,14 @@
   margin-bottom: 20px;
   background-color: transparent;
   .card-title a {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @include ellipsis(2); // Ellipsis sur 2 lignes
     color: $black;
   }
   .card-img {
     overflow: hidden;
     border-radius: 0;
-    @include ratio(16, 9);
+    @include ratio(16, 9); // Garder l'image au ratio
+    @include zoomIn(.5s, 1.2);
     img {
       height: 100%;
       width: 100%;
@@ -30,6 +27,6 @@
     height: calc(100% - 20px);
     margin-bottom: 0;
   .card-img {
-    @include ratio(3, 2);
+    @include ratio(3, 2); // Garder l'image au ratio
   }
 }

@@ -1,47 +1,40 @@
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
+  /* Make sure select elements fit in widgets. */
+  select {
+    max-width: 100%;
+  }
 }
 
 .widget {
-    .widget-title {
-        @include heading-4;
-        color: $red;
-        position: relative;
-        &:after {
-           content: "";
-           position: absolute;
-           right: 0;
-           height: 1px;
-           width: 40%;
-           background-color: $red;
-           top: 50%;
-           display: block;
-        }
+  .widget-header {
+    @include line(12px);
+  }
+  .widget-title {
+    @include heading-4;
+    color: $red;
+    position: relative;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0 0 0;
+      margin-bottom: 10px;
+      a {
+        color: $black;
+      }
+      .post-date {
+        font-style: italic;
+        color: $grey1;
+      }
+      &:not(:first-child) {
+        border-top: 1px solid $grey1;
+      }
     }
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li {
-           display: flex;
-           flex-direction: column;
-           padding: 10px 0 0 0;
-           margin-bottom: 10px;
-           a {
-               color: $black;
-           }
-           .post-date {
-               font-style: italic;
-               color: $grey1;
-           }
-           &:not(:first-child) {
-               border-top: 1px solid $grey1;
-           }
-        }
-    }
+  }
 }
