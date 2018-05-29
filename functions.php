@@ -176,8 +176,8 @@ function CaptainTsubasa_widgets_init() {
 		'description'   => __( 'Add widgets here to appear in your footer.', 'CaptainTsubasa' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-4">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-header"><h2 class="widget-title">',
+		'after_title'   => '</h2><div class="line"></div></div>',
 	) );
 }
 add_action( 'widgets_init', 'CaptainTsubasa_widgets_init' );

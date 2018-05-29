@@ -25,6 +25,9 @@
     }
 
     .widget {
+        .widget-header {
+            @include line(12px, $grey1);
+        }
         .widget-title {
             color: $grey1;
 

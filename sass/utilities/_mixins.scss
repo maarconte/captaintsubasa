@@ -130,12 +130,12 @@
 	text-overflow: ellipsis;
 }
 
-@mixin line($height) {
+@mixin line($height, $color: $red) {
 	display: flex;
 	.line {
 		margin-left: 30px;
 		height: $height;
 		width: 100%;
-		border-bottom: 1px solid $red;
+		border-bottom: 1px solid $color;
 	}
 }

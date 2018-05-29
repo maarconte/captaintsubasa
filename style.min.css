@@ -205,6 +205,8 @@ embed,iframe,object{max-width:100%}
 .site-footer ul.social-links-menu .icon{fill:#9b9b9b !important}
 .site-footer .site-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;color:#9b9b9b !important;opacity:.6}
 .site-footer .site-info .sep{margin:0 5px}
+.site-footer .widget .widget-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.site-footer .widget .widget-header .line{margin-left:30px;height:12px;width:100%;border-bottom:1px solid #9b9b9b}
 .site-footer .widget .widget-title{color:#9b9b9b}
 .site-footer .widget .widget-title:after{background-color:#9b9b9b}
 .site-footer .widget ul li a{color:#9b9b9b}
